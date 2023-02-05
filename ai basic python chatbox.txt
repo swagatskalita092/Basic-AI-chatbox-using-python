@@ -1,0 +1,24 @@
+# Define a list of pre-defined responses
+responses = {
+    "what's your name?": "I'm a chatbot, I don't have a name.",
+    "what's up?": "I'm doing well, thank you for asking.",
+    "how are you?": "I'm doing great, how about you?",
+    "bye": "Goodbye!"
+}
+
+# Define a function to respond to user input
+def respond(message):
+    # Check if the message is in the pre-defined responses
+    if message in responses:
+        return responses[message]
+    else:
+        return "I'm sorry, I don't understand what you're saying."
+
+# Continuously get user input and respond
+while True:
+    message = input("You: ")
+    response = respond(message)
+    print("Chatbot:", response)
+    
+    if message == "bye":
+        break
